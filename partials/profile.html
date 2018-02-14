@@ -1,0 +1,160 @@
+<div ng-controller="profileController" class="wrapper">
+    <div class="main">
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <div class="card card-user">
+                        <div class="image" style="width:263; height:150; background-color:#d8d1c9 ">
+
+                        </div>
+                        <div class="content">
+                            <div class="author">
+                                <a href="#">
+                                    <img class="avatar border-white" src="/assets/img/placeholder.jpg" alt="..." />
+
+                                    <h4 class="title">Moses Munene
+                                    </h4>
+                                </a>
+                            </div>
+                            <p class="description text-center">
+                                Contact me for any questions.
+                            </p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button href="#" class="btn btn-icon btn-twitter"><i class="ti-twitter"></i></button>
+                            <button href="#" class="btn btn-icon btn-github"><i class="ti-github"></i></button>
+                            <button href="#" class="btn btn-icon"><i class="ti-email"></i></button>
+                        </div>
+
+                    </div>
+                    <!-- end card -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="row">
+
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                            <li class="active"><a href="#stocks" showtab data-toggle="tab">Holdings</a></li>
+                            <li><a href="#cash" showtab data-toggle="tab">Cash Position</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tab-content" class="tab-content">
+                    <div class="tab-pane active" id="stocks">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5>Stock Holdings</h5>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <th>stock</th>
+                                        <th>units</th>
+                                        <th>avg buying price</th>
+                                        <th>purchase value</th>
+                                        <th>Current Value</th>
+                                        <th>profit/loss</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ACCS</td>
+                                            <td>100</td>
+                                            <td>10.0</td>
+                                            <td>1000</td>
+                                            <td>1500</td>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ACCS</td>
+                                            <td>100</td>
+                                            <td>10.0</td>
+                                            <td>1000</td>
+                                            <td>1500</td>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ACCS</td>
+                                            <td>100</td>
+                                            <td>10.0</td>
+                                            <td>1000</td>
+                                            <td>1500</td>
+                                            <td>500</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="cash">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div ng-init="getBalance()" class="form-group">
+                                    <label for="cash-balance">Your Cash Balance is:</label>
+                                    <input id="cash-balance" ng-model="balance" type="text" readonly class="form-control" />
+
+                                    <label for="amount">Capital infusion?</label>
+                                    <input id="cash-balance" type="text" ng-model="depositAmount" placeholder="0.00" class="form-control" />
+                                    <br/>
+                                    <button class="btn btn-danger">Uum..No</button>
+                                    <button class="btn btn-success" ng-click="makeDeposit()">Yep!..Do It</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5>Transaction History</h5>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <th>stock</th>
+                                <th>units</th>
+                                <th>avg buying price</th>
+                                <th>purchase value</th>
+                                <th>Current Value</th>
+                                <th>profit/loss</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ACCS</td>
+                                    <td>100</td>
+                                    <td>10.0</td>
+                                    <td>1000</td>
+                                    <td>1500</td>
+                                    <td>500</td>
+                                </tr>
+                                <tr>
+                                    <td>ACCS</td>
+                                    <td>100</td>
+                                    <td>10.0</td>
+                                    <td>1000</td>
+                                    <td>1500</td>
+                                    <td>500</td>
+                                </tr>
+                                <tr>
+                                    <td>ACCS</td>
+                                    <td>100</td>
+                                    <td>10.0</td>
+                                    <td>1000</td>
+                                    <td>1500</td>
+                                    <td>500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

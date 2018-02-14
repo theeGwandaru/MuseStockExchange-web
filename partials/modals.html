@@ -1,0 +1,149 @@
+<!-- register modal -->
+<div class="modal" id="registerModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-medium modal-register">
+        <div class="modal-content">
+            <div class="modal-header no-border-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h6 class="text-muted">Welcome</h6>
+                <h3 class="modal-title">Muse Stock Exchange</h3>
+                <p>Create your account free and secure</p>
+            </div>
+            <div class="modal-body">
+                <div class="arcodion">
+                    <div class="panel panel-default" style="border:none">
+                        <a data-toggle="collapse" data-target="#collapseEmailReg" class="collapsed btn btn-block" aria-expanded="false">
+                            sign up with email
+                        </a>
+                        <div id="collapseEmailReg" class="panel-collapse collapse" aria-expanded="false">
+                            <div class="panel-body">
+                                <iframe src="sink.html" name="sink" style="display:none"></iframe>
+                                <form data-ng-submit="register(credentials)">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" data-ng-model="credentials.username" value="" placeholder="Email" class="form-control border-input" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" data-ng-model="credentials.password" value="" placeholder="Password" class="form-control border-input"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password Confirm</label>
+                                        <input type="password" data-ng-model="credentials.passwordConfirm" value="" placeholder="Password Confirm" class="form-control border-input"
+                                        />
+                                    </div>
+                                    <input type="submit" class="btn btn-block">register</input>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-block">Connect with Facebook</button>
+                <button class="btn btn-block">Connect with Twitter</button>
+
+            </div>
+            <div class="modal-footer no-border-footer" />
+        </div>
+    </div>
+</div>
+<!-- end register modal -->
+
+<div class="modal" id="registrationSuccessModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-medium  modal-register">
+        <div class="modal-content">
+            <div class="modal-header no-border-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h6 class="text-muted">Welcome</h6>
+                <h3 class="modal-title">Muse Stock Exchange</h3>
+                <p>You are now registered & logged in</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end registration success modal -->
+
+<!-- login modal -->
+<div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-medium">
+        <div class="modal-content">
+            <div class="modal-header no-border-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h6 class="text-muted">Welcome</h6>
+                <h3 class="modal-title">Muse Stock Exchange</h3>
+                <p>Log in to your account</p>
+            </div>
+            <div class="modal-body">
+                <form data-ng-submit="login(user)">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input data-ng-model="user.username" type="email" value="" placeholder="Email" class="form-control border-input" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input data-ng-model="user.password" type="password" value="" placeholder="Password" class="form-control border-input" required/>
+                    </div>
+                    <input type="submit" class="btn btn-fill btn-block"> Log in</input>
+            </div>
+            </form>
+            <div class="modal-footer no-border-footer">
+                <span class="text-muted">Looking<a href="#">create an account</a> ?</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end login modal -->
+
+<div class="modal" id="loginSuccessModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-medium  modal-register">
+        <div class="modal-content">
+            <div class="modal-header no-border-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h6 class="text-muted">Muse Stock Exchange</h6>
+                <div ng-if="currentUser">
+                    <h3 class="modal-title">Welcome, {{ currentUser.authId }}</h3>
+                    <p>You are now logged in</p>
+                </div>
+                <div ng-if="!currentUser">
+                    <h3 class="modal-title">Woops!!</h3>
+                    <p>the credentials provided did not clear</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end login success modal -->
+
+<div class="modal" id="logoutmodal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-medium  modal-register">
+        <div class="modal-content">
+            <div class="modal-header no-border-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h6 class="text-muted">Muse Stock Exchange</h6>
+                <div ng-if="currentUser">
+                    <h3 class="modal-title">Goodbye, {{ currentUser.authId }}</h3>
+                    <p>Alas!! All good things....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end logout success modal -->
+
+<div class="modal" id="somethingWrongModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-medium  modal-register">
+        <div class="modal-content">
+            <div class="modal-header no-border-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h6 class="text-muted">Muse Stock Exchange</h6>
+                <div>
+                    <h3 class="modal-title">Crap!! Something went wrong</h3>
+                </div>
+                <div class="modal-body">
+                    if not your connection then it's the mice in our servers. Please try later.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end network failure modal -->

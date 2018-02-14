@@ -1,0 +1,38 @@
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Place Order</h4>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label for="sel2">Type:</label>
+            <select ng-model="orderType" class="form-control" id="sel2">
+                                    <option>BUY</option>
+                                    <option>SELL</option>
+                                </select>
+
+            <label for="sel1">Counter:</label>
+            <select ng-model="stock" class="form-control" id="sel1">
+                                    <option>ACCS</option>
+                                    <option>ATLAS</option>
+                                    <option>KEGN</option>
+                                </select>
+
+            <label for="units">Units:</label>
+            <input ng-model="units" id="units" type="text" value="" placeholder="Units" class="form-control" />
+
+            <label for="price">Price:</label>
+            <input ng-model="price" id="price" type="text" value="" placeholder="price" class="form-control" />
+
+            <!-- <label for="expire-date-picker">Expire Date:</label>
+            <input id="expire-date-picker" ng-model="$parent.expiry" class="datepicker form-control" type="text" />
+            -->
+            <button class="btn btn-danger">Uum..No</button>
+            <button class="btn btn-default">Maybe later?</button>
+            <button class="btn btn-success" ng-click="placeOrder()">Yep!..Do It</button>
+        </div>
+    </div>
+</div>
+<script src="/assets/js/lib/bootstrap-datepicker.js"></script>
+    
+    <script src="/assets/js/lib/ct-paper.js"></script>

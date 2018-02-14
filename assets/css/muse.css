@@ -1,0 +1,17 @@
+ .table-fixed-scroll tr {
+    width: 100%;
+    display: inline-table;
+    table-layout: fixed;
+}
+
+.table-fixed-scroll table {
+    height: 448px; 
+    display: -moz-groupbox; 
+}
+
+.table-fixed-scroll tbody {
+    overflow-y: scroll;
+    height: 426px; 
+    width: 100%;
+    position: absolute;
+}
